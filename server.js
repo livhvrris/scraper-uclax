@@ -1,4 +1,5 @@
 var express = require("express");
+var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
@@ -11,8 +12,6 @@ var cheerio = require("cheerio");
 
 var Promise = require("bluebird");
 mongoose.Promise = Promise;
-
-var exphbs = require("express-handlebars");
 
 
 var app = express();
@@ -27,6 +26,13 @@ var app = express();
 
 
 mongoose.connect("mongodb://localhost/nytarticlescrape");
+
+
+// if (PORT === 3000) {
+//   mongoose.connect("mongodb://localhost/nytarticlescrape");
+// } else {
+//   mongoose.connect("mongodb://heroku_4t0tqfmk:f7h2j57qi8o8tubu6g02tokq0q@ds161069.mlab.com:61069/heroku_4t0tqfmk");
+// }
 
 
 var db = mongoose.connection;
