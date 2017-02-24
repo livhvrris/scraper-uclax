@@ -1,21 +1,31 @@
 {
-  "name": "The New York Times - Article Scraper",
+  "name": "nyt_article_scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "New York Times - Article Scraper",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Olivia Harris",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livhvrris/scraper-uclax.git"
+  },
+  "author": "Olivia Harris - olivia@hvrrisgroup.com",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livhvrris/scraper-uclax/issues"
+  },
+  "homepage": "https://github.com/livhvrris/scraper-uclax#readme",
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "body-parser": "^1.15.0",
-    "cheerio": "^0.20.0",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.6",
-    "morgan": "^1.7.0",
-    "request": "^2.69.0"
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.2",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
   }
 }

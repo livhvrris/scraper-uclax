@@ -1,0 +1,59 @@
+<div class="container center">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <h3>The New York Times &mdash; Kinda</h3>
+        <h5><i>NYT Article Scraper</i></h5>
+    </div>
+
+    <div class="row" id="scrape">
+        <button type="button" class="waves-effect waves-light btn-large black" id="startscrape">START SCRAPE</button>
+    </div>
+
+    <div class="row">&nbsp;</div>
+
+</div>
+
+<div class="container">    
+    <div id="articles">
+        <ul>        
+            {{#each article}}
+                <div class="card">
+                    <div class="card-content">
+                        <li>
+                        <span class="card-title">{{this.title}}</span>
+                        <p>{{this.link}}</p>
+                            {{#if this.note}}
+                                {{#each this.note}}
+                                    <p class="well">
+                                        {{./comment}}
+                                        <div class="row">
+                                            <button class="waves-effect waves-light red btn" data-id="{{this.note._id}}" id="delete">Delete Comment</button>
+                                        </div>
+                                    </p>
+                                {{/each}}
+                            {{/if}}
+                        </li>
+                    </div>
+
+                    <div class="card-action">
+                    <div class="container">
+                    <br>
+                        <form class="create-update-form" action="/articles/{{this._id}}/notes" method="POST">
+                            <div class="row">
+                                <label for="usercomment">POST A COMMENT:</label>
+                                <textarea name="comment" id="usercomment" class="materialize-textarea"></textarea>    
+                            </div>
+                            <div class="row">
+                                <button class="waves-effect waves-light btn" type="submit" class="sub" id="postcomment">Post</button>
+                            </div>
+                        </form>
+
+                    <br>
+                    </div>
+                    </div>
+
+                </div>
+            {{/each}}
+        </ul>
+    </div>
+</div>
