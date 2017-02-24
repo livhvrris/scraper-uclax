@@ -1,5 +1,5 @@
 {
-  "name": "The New York Times - Scaper",
+  "name": "The New York Times - Article Scraper",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
